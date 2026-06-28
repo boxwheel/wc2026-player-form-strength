@@ -1,0 +1,9 @@
+{
+  "experiment": "w3-12-calibrated-et-blend",
+  "model": "ExtraTrees + Platt calibration (inner 3-fold) + Elo blend",
+  "blend_alpha_elo": 0.9500000000000001,
+  "calibration_method": "sigmoid",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0
+}

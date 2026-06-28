@@ -1,0 +1,9 @@
+{
+  "experiment": "w3-11-gbm-blend",
+  "model": "GradientBoosting params={'n_estimators': 50, 'max_depth': 2, 'learning_rate': 0.05} + Elo blend",
+  "blend_alpha_elo": 1.0,
+  "features": "all diff_ features (33 total)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0
+}

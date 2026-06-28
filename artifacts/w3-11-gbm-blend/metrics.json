@@ -1,0 +1,17 @@
+{
+  "experiment": "w3-11-gbm-blend",
+  "cv_log_loss_mean": 0.8280234037268355,
+  "cv_log_loss_std": 0.1295169883575433,
+  "accuracy": 0.625,
+  "delta_vs_elo_baseline": -0.005676596273164525,
+  "delta_vs_ensemble_frontier": 0.06722340372683544,
+  "blend_alpha_elo": 1.0,
+  "best_gbm_params": {
+    "n_estimators": 50,
+    "max_depth": 2,
+    "learning_rate": 0.05
+  },
+  "best_gbm_standalone_ll": 1.0487608304045635,
+  "wilcoxon_p": 0.2699499238386496,
+  "verdict": "GREEN"
+}

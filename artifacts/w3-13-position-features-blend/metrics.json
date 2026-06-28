@@ -1,0 +1,43 @@
+{
+  "experiment": "w3-13-position-features-blend",
+  "cv_log_loss_mean": 0.8280234037268355,
+  "cv_log_loss_std": 0.1295169883575433,
+  "accuracy": 0.625,
+  "delta_vs_elo_baseline": -0.005676596273164525,
+  "delta_vs_ensemble_frontier": 0.06722340372683544,
+  "blend_alpha_elo": 1.0,
+  "position_feature_count": 9,
+  "et_pos_standalone_ll": 0.9502184627697648,
+  "top_position_features": [
+    [
+      "diff_pos_fwd_overall",
+      0.4648801118282822
+    ],
+    [
+      "diff_pos_fwd_shoot",
+      0.42261801810703287
+    ],
+    [
+      "diff_pos_def_overall",
+      0.42166135074740707
+    ],
+    [
+      "diff_pos_mid_overall",
+      0.41958238460121927
+    ],
+    [
+      "diff_pos_def_defend",
+      0.40706233003012887
+    ],
+    [
+      "diff_pos_mid_pass",
+      0.40451875137936116
+    ],
+    [
+      "diff_pos_attack_vs_defense",
+      0.0170645779555227
+    ]
+  ],
+  "wilcoxon_p": 0.2699499238386496,
+  "verdict": "GREEN"
+}

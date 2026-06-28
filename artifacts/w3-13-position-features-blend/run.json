@@ -1,0 +1,19 @@
+{
+  "experiment": "w3-13-position-features-blend",
+  "model": "ET on position-specific FIFA features + Elo blend",
+  "features": [
+    "diff_pos_gk_overall",
+    "diff_pos_gk_defend",
+    "diff_pos_def_defend",
+    "diff_pos_def_overall",
+    "diff_pos_mid_pass",
+    "diff_pos_mid_overall",
+    "diff_pos_fwd_shoot",
+    "diff_pos_fwd_overall",
+    "diff_pos_attack_vs_defense"
+  ],
+  "blend_alpha_elo": 1.0,
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0
+}

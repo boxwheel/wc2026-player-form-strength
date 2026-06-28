@@ -1,0 +1,14 @@
+{
+  "experiment": "w3-12-calibrated-et-blend",
+  "cv_log_loss_mean": 0.8279789486031953,
+  "cv_log_loss_std": 0.12689482946090655,
+  "accuracy": 0.625,
+  "delta_vs_elo_baseline": -0.005721051396804677,
+  "delta_vs_ensemble_frontier": 0.06717894860319529,
+  "blend_alpha_elo": 0.9500000000000001,
+  "calibration_method": "sigmoid",
+  "et_standalone_ll": 0.891405259625799,
+  "et_calibrated_standalone_ll": 0.887911663166869,
+  "wilcoxon_p": 0.34032237338858984,
+  "verdict": "GREEN"
+}

@@ -38,6 +38,8 @@ Form computation: last 18 months (Jan 2025 - Jun 10, 2026) win_rate, gd_per_matc
 
 ## Experiment Results (5-fold × 10-repeat stratified CV, seed=0)
 
+### Rounds 1 & 2 (W3-01 to W3-10)
+
 | Experiment | CV Log-Loss | ±Std | Accuracy | Δ vs Elo | Verdict |
 |---|---|---|---|---|---|
 | Elo baseline | 0.8337 | 0.134 | 62.5% | — | Reference |
@@ -52,13 +54,34 @@ Form computation: last 18 months (Jan 2025 - Jun 10, 2026) win_rate, gd_per_matc
 | W3-09 Elo+ET blend (α=1.0) | **0.8280** | 0.130 | 62.5% | **-0.006** | GREEN |
 | W3-10 3-model blend | 0.8287 | 0.118 | 62.5% | -0.005 | FLAT |
 
+### Round 3 (W3-11 to W3-14) — Ceiling Confirmation
+
+| Experiment | Hypothesis | Standalone LL | Blend LL | α | Verdict |
+|---|---|---|---|---|---|
+| W3-11 GBM blend | GBM has better calibration than ET | 1.0488 | 0.8280 | 1.00 | GREEN† |
+| W3-12 Cal-ET blend | Platt calibration of ET OOF | 0.8879 | **0.8280** | 0.95 | GREEN† |
+| W3-13 Position features | Position-specific FIFA ratings | 0.9502 | 0.8280 | 1.00 | GREEN† |
+| W3-14 Form window | 6m vs 18m lookback | 0.9382 | 0.8280 | 1.00 | GREEN† |
+
+†GREEN (0.8280 < 0.8332) but 0.8280 equals the averaged Elo OOF — not a genuine model contribution.
+
 ## Key Findings
 
 1. **Curse of dimensionality dominates**: With 64 samples, adding player-form features to logistic regression consistently hurts (REDs across W3-01 to W3-05). The 35+ feature space causes over-fitting even with L2 regularization.
 2. **Feature correlations are real**: Top features by |corr| with outcome: `diff_fifa_top11_mean_overall` (|r|=0.560), `diff_squad_top11_mv` (0.531), `diff_form_gd_per_match` (0.525). Signal exists but is hard to exploit on n=64.
-3. **Blending is the right lever**: ET+Elo blend at high Elo weight (α≥0.80) marginally beats the baseline (0.8280 vs 0.8337). This represents the player-form models adding orthogonal signal when given very low weight.
-4. **Recent international form**: The 18-month form (win_rate, gd_per_match) has strong correlation but 22% NaN coverage (some teams not in results database), reducing utility.
-5. **Frontier gap**: Player-form features alone cannot reach the 0.7608 Wave-2 ensemble frontier — the data bottleneck (n=64) is the binding constraint.
+3. **Blending is the right lever (but hits the Elo ceiling)**: All blend experiments converge to α=1.0 (pure Elo OOF) in Round 3. The 0.8280 value is the Elo OOF measured via averaged-OOF probabilities, which is smoother than per-fold loss. It is not a genuine improvement from player features.
+4. **GBM is the wrong tree family for n=64**: Boosting amplifies noise (standalone LL=1.05) vs bagging methods (ET=0.89). ExtraTrees is the best standalone player-form model.
+5. **Position disaggregation hurts**: Position-specific FIFA ratings (GK defend, FWD shoot) have weaker correlation (|r|=0.47) than aggregated ratings (0.56) and suffer 45% NaN for GKs.
+6. **18m form window beats 6m**: 6-month lookback has more NaN (25%) and weaker signal (standalone LL=0.97 vs 0.94).
+7. **n=64 is the hard ceiling**: No feature engineering, model family, calibration, or lookback window can push the blend beyond the Elo OOF of ~0.8280. Structural changes are needed.
+
+## What Wave 4 Should Try
+
+To genuinely beat the 0.7608 Wave-2 frontier:
+1. **More data**: Historical WC group stages (1982–2022 ≈ 8 × 48 = +384 rows)
+2. **W3 features as Wave-2 meta-features**: Add player-form features on top of the Wave-2 stacked ensemble OOF
+3. **Leave-one-tournament-out CV**: Proper historical evaluation
+4. **Better player matching**: TF-IDF gives 56.4% coverage; phonetic/alias-DB could reach 80%+
 
 ## How to Reproduce
 
@@ -69,8 +92,9 @@ cd ~/research
 pip install pandas numpy scikit-learn scipy
 
 cd wave3-player-form
-python3 code/run_experiments.py   # experiments 01-06
-python3 code/run_exp2.py          # experiments 07-12
+python3 code/run_experiments.py   # experiments W3-01 to W3-06
+python3 code/run_exp2.py          # experiments W3-07 to W3-10
+python3 code/run_exp3.py          # experiments W3-11 to W3-14 (ceiling confirmation)
 ```
 
 ## Repository

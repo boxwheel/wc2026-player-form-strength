@@ -1,0 +1,9 @@
+{
+  "experiment": "w3-14-form-window-blend",
+  "model": "ET on 18m form features + Elo blend",
+  "best_form_window": "18m",
+  "blend_alpha_elo": 1.0,
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0
+}

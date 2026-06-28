@@ -1,0 +1,16 @@
+{
+  "experiment": "w3-14-form-window-blend",
+  "cv_log_loss_mean": 0.8280234037268355,
+  "cv_log_loss_std": 0.1295169883575433,
+  "accuracy": 0.625,
+  "delta_vs_elo_baseline": -0.005676596273164525,
+  "delta_vs_ensemble_frontier": 0.06722340372683544,
+  "blend_alpha_elo": 1.0,
+  "best_form_window": "18m",
+  "et_6m_standalone_ll": 0.9704494957916144,
+  "et_18m_standalone_ll": 0.9381861807067737,
+  "blend_6m_ll": 0.8280234037268355,
+  "blend_18m_ll": 0.8280234037268355,
+  "wilcoxon_p": 0.2699499238386496,
+  "verdict": "GREEN"
+}
