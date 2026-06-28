@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-02-fifa-ratings-elo",
+  "cv_log_loss_mean": 0.9087921059193889,
+  "cv_log_loss_std": 0.1464475822349297,
+  "overall_log_loss": 0.8987550101016369,
+  "accuracy": 0.59375,
+  "delta_vs_elo_baseline": 0.07509210591938886,
+  "delta_vs_ensemble_frontier": 0.14799210591938883,
+  "verdict": "RED"
+}

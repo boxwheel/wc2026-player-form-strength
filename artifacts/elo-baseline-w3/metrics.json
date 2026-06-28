@@ -1,0 +1,10 @@
+{
+  "experiment": "elo-baseline-w3",
+  "cv_log_loss_mean": 0.8336503142763472,
+  "cv_log_loss_std": 0.13397308628658033,
+  "overall_log_loss": 0.8276034347378447,
+  "accuracy": 0.625,
+  "delta_vs_elo_baseline": -4.9685723652825864e-05,
+  "delta_vs_ensemble_frontier": 0.07285031427634714,
+  "verdict": "FLAT"
+}

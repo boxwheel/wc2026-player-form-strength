@@ -1,0 +1,11 @@
+{
+  "experiment": "w3-06-elo-playerform-blend",
+  "blend_alpha_elo": 0.5,
+  "blend_model": "w3_05",
+  "model": "50% Elo OOF + 50% best player-form OOF (uniform blend)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "delta_vs_elo": 0.005593862565067442,
+  "wilcoxon_p": 0.8522635837916992
+}

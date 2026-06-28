@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-05-random-forest",
+  "cv_log_loss_mean": 0.8943973824818348,
+  "cv_log_loss_std": 0.16506561320160656,
+  "overall_log_loss": 0.8826925757505037,
+  "accuracy": 0.640625,
+  "delta_vs_elo_baseline": 0.06069738248183476,
+  "delta_vs_ensemble_frontier": 0.13359738248183473,
+  "verdict": "RED"
+}

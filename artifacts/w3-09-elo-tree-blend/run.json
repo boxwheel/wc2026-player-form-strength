@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-09-elo-tree-blend",
+  "blend_alpha_elo": 1.0,
+  "base_model": "RandomForest or ExtraTrees (best of two)",
+  "model_ll": 0.891405259625799,
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "delta_vs_elo": -0.005676596273164525
+}

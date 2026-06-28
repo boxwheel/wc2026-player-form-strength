@@ -1,0 +1,24 @@
+{
+  "experiment": "w3-02-fifa-ratings-elo",
+  "features": [
+    "elo_diff",
+    "rank_diff",
+    "host_diff",
+    "diff_fifa_mean_overall",
+    "diff_fifa_top11_mean_overall",
+    "diff_fifa_top3_overall",
+    "diff_fifa_mean_pace",
+    "diff_fifa_mean_shoot",
+    "diff_fifa_mean_pass",
+    "diff_fifa_mean_defend",
+    "diff_fifa_mean_physical"
+  ],
+  "n_features": 11,
+  "model": "LogisticRegression(C=0.1, penalty=l2)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "delta_vs_elo": 0.07509210591938886,
+  "wilcoxon_p": 0.9999999999356417,
+  "note": "EAFC25 player ratings (Overall, Pace, Shoot, Pass, Drib, Defend, Physical) aggregated to team mean/top11"
+}

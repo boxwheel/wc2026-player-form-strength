@@ -1,0 +1,37 @@
+{
+  "experiment": "w3-01-squad-elo",
+  "features": [
+    "elo_diff",
+    "rank_diff",
+    "host_diff",
+    "diff_squad_total_mv",
+    "diff_squad_top11_mv",
+    "diff_squad_top3_mv",
+    "diff_squad_mean_age",
+    "diff_squad_peak_pct",
+    "diff_squad_top11_mean_age",
+    "diff_squad_mean_caps",
+    "diff_squad_top11_mean_caps",
+    "diff_squad_veteran_count",
+    "diff_squad_fwd_goals",
+    "diff_squad_fwd_goals_per_cap",
+    "diff_squad_gk_mv",
+    "diff_squad_def_mv",
+    "diff_squad_mid_mv",
+    "diff_squad_fwd_mv",
+    "diff_squad_top11_age_penalty",
+    "diff_squad_depth_mv"
+  ],
+  "n_features": 20,
+  "model": "LogisticRegression(C=0.1, penalty=l2)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "python_deps": {
+    "sklearn": "1.9.0",
+    "pandas": "3.0.3",
+    "numpy": "2.x"
+  },
+  "delta_vs_elo": 0.07527563582604224,
+  "wilcoxon_p": 0.9998845625074102
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-03-form-elo",
+  "cv_log_loss_mean": 0.9211647382509814,
+  "cv_log_loss_std": 0.17293838486513247,
+  "overall_log_loss": 0.903336565962303,
+  "accuracy": 0.640625,
+  "delta_vs_elo_baseline": 0.08746473825098144,
+  "delta_vs_ensemble_frontier": 0.1603647382509814,
+  "verdict": "RED"
+}

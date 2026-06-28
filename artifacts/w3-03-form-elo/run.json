@@ -1,0 +1,22 @@
+{
+  "experiment": "w3-03-form-elo",
+  "features": [
+    "elo_diff",
+    "rank_diff",
+    "host_diff",
+    "diff_form_win_rate",
+    "diff_form_draw_rate",
+    "diff_form_loss_rate",
+    "diff_form_gd_per_match",
+    "diff_form_goals_per_match"
+  ],
+  "n_features": 8,
+  "model": "LogisticRegression(C=0.3, penalty=l2)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "form_lookback_days": 550,
+  "delta_vs_elo": 0.08746473825098144,
+  "wilcoxon_p": 0.9999998675146422,
+  "note": "Recent 18-month international form: win_rate, draw_rate, loss_rate, gd_per_match, goals_per_match"
+}

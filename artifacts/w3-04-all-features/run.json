@@ -1,0 +1,16 @@
+{
+  "experiment": "w3-04-all-features",
+  "n_features": 33,
+  "feature_groups": {
+    "elo": 3,
+    "squad": 17,
+    "fifa": 8,
+    "form": 5
+  },
+  "model": "LogisticRegression(C=0.05, penalty=l2)",
+  "cv": "RepeatedStratifiedKFold(5x10, seed=0)",
+  "n_samples": 64,
+  "seed": 0,
+  "delta_vs_elo": 0.0854152801621938,
+  "wilcoxon_p": 0.9999915516854614
+}

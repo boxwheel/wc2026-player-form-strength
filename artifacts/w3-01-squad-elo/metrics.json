@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-01-squad-elo",
+  "cv_log_loss_mean": 0.9089756358260422,
+  "cv_log_loss_std": 0.14477163643393046,
+  "overall_log_loss": 0.8923823367815076,
+  "accuracy": 0.515625,
+  "delta_vs_elo_baseline": 0.07527563582604224,
+  "delta_vs_ensemble_frontier": 0.1481756358260422,
+  "verdict": "RED"
+}

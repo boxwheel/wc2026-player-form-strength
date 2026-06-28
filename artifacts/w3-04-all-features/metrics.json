@@ -1,0 +1,10 @@
+{
+  "experiment": "w3-04-all-features",
+  "cv_log_loss_mean": 0.9191152801621938,
+  "cv_log_loss_std": 0.1467231600222667,
+  "overall_log_loss": 0.9033955190120742,
+  "accuracy": 0.609375,
+  "delta_vs_elo_baseline": 0.0854152801621938,
+  "delta_vs_ensemble_frontier": 0.15831528016219376,
+  "verdict": "RED"
+}
